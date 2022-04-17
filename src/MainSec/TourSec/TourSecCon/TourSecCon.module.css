@@ -1,0 +1,57 @@
+.TourSecCon {
+  width: 100%;
+  min-height: calc(100vh - 245px);
+  padding: 35px 85px;
+  transition: padding 0.15s linear;
+}
+.TourSecCon .Title {
+  font-size: 45px;
+  color: #061E37;
+  text-align: center;
+  font-weight: 600;
+}
+.TourSecCon .TourCards {
+  margin-top: 50px;
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 30px;
+}
+.TourSecCon .invisible {
+  display: none;
+}
+.TourSecCon .Btn {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1670px) {
+  .TourSecCon .TourCards {
+    grid-template: auto/repeat(auto-fill, minmax(400px, 1fr));
+  }
+  .TourSecCon .visible {
+    grid-template: auto/repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+@media screen and (max-width: 1017px) {
+  .TourSecCon {
+    padding: 35px 20px;
+  }
+}
+@media screen and (max-width: 866px) {
+  .TourSecCon .TourCards {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 455px) {
+  .TourSecCon {
+    padding: 35px 0;
+  }
+  .TourSecCon .TourCards {
+    grid-template: auto/repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+/*# sourceMappingURL=TourSecCon.module.css.map */

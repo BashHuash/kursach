@@ -1,0 +1,178 @@
+$lightBlue: #00E9BE;
+$blue: #061E37;
+
+.Modal {
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.25);
+
+    .ModalCon {
+        width: 60vw;
+        height: 600px;
+        background-color: white;
+        border-radius: 20px;
+
+        .ClosePanel {
+            width: 100%;
+            height: 36px;
+            background-color: $lightBlue;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .CloseBtn {
+                transition: all .45s ease-in-out;
+
+                div {
+                    background-color: $blue;
+                    width: 30px;
+                    height: 3px;
+
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translateY(1.5px);
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotate(-45deg) translateY(-1.5px);
+                    }
+                }
+            }
+
+            &:hover {
+                .CloseBtn {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .Padding {
+            padding: 20px;
+        }
+    }
+}
+
+.ModalActive {
+    cursor: auto;
+    opacity: 15;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all .55s linear;
+
+    .ModalCon {
+        width: 70vw;
+        background-color: white;
+        border-radius: 20px;
+        transition: all .35s linear;
+
+        .ClosePanel {
+            cursor: pointer;
+            width: 100%;
+            height: 36px;
+            background-color: $lightBlue;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .CloseBtn {
+                transition: all .45s ease-in-out;
+
+                div {
+                    background-color: $blue;
+                    width: 30px;
+                    height: 3px;
+
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translateY(2px);
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotate(-45deg) translateY(-2px);
+                    }
+                }
+            }
+
+            &:hover {
+                .CloseBtn {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .Padding {
+            width: 100%;
+            height: 94%;
+            padding: 20px;
+            display: grid;
+            grid-template: .3fr 1fr .9fr / 1fr 1fr;
+            gap: 20px;
+            grid-template-areas: 'img title' 'img info' 'btn info';
+
+            .Info {
+                grid-area: info;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ModalActive {
+
+        .ModalCon {
+            height: 700px;
+
+            .Padding {
+                display: grid;
+                grid-template: 180px 50px 1fr 60px / 1fr 1fr;
+                gap: 20px;
+                grid-template-areas: 'img img' 'title title' 'info info' 'btn btn';
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ModalActive {
+
+        .ModalCon {
+            width: 90%;
+            height: 700px;
+
+            .Padding {
+                display: grid;
+                grid-template: 180px 50px 1fr 60px / 1fr 1fr;
+                gap: 20px;
+                grid-template-areas: 'img img' 'title title' 'info info' 'btn btn';
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .ModalActive {
+        .ModalCon {
+            height: 100vh;
+        }
+    }
+}

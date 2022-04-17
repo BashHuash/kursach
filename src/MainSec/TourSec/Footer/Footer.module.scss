@@ -1,0 +1,150 @@
+$blue: #061E37;
+
+.Footer {
+    width: 100%;
+    height: 245px;
+    background-image: url(../../../media/subBG.png);
+    background-size: cover;
+    display: grid;
+    padding: 45px 85px;
+    grid-template: 1fr / 350px repeat(2, 1fr);
+    grid-template-areas: 'for about logo';
+    align-items: center;
+
+    .ForTourists {
+        justify-self: start;
+        align-self: center;
+        color: white;
+        grid-area: for;
+
+        h1 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            transition: color .15s linear;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        .Active{
+            color: $blue;
+        }
+    }
+
+    .About {
+        justify-self: start;
+        color: white;
+        white-space: nowrap;
+        grid-area: about;
+
+        h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            transition: color .15s linear;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        .Active{
+            color: $blue;
+        }
+    }
+
+    a {
+        justify-self: end;
+        align-self: center;
+        grid-area: logo;
+
+        .logo{
+            path:nth-child(1){
+                transition: all .15s linear;
+            }
+            path:nth-child(2){
+                transition: all .55s linear;
+            }
+            circle{
+                transition: all .55s linear;
+            }
+            &:hover{
+                path{
+                    fill: $blue;
+                }
+                circle{
+                    stroke: $blue;
+                    stroke-width: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .Footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 45px 35px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .Footer {
+        padding: 0 35px;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-template-areas: 'for about' 'for logo';
+
+        .About {
+            justify-self: center;
+            align-self: center;
+        }
+
+        a {
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Footer {
+        padding: 0 15px;
+
+        .About {
+            text-align: center;
+            justify-self: end;
+            align-self: center;
+        }
+
+        a {
+            justify-self: end;
+            align-self: center;
+        }
+    }
+}

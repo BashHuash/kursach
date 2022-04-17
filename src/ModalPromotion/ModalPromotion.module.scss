@@ -1,0 +1,144 @@
+$lightBlue: #00E9BE;
+$blue: #061E37;
+
+.ModalPromActive {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ModalPromCon {
+        border-radius: 20px;
+        background-color: white;
+        width: 70vw;
+        height: 700px;
+        cursor: auto;
+
+        .ClosePanel {
+            width: 100%;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $lightBlue;
+            border-radius: 20px 20px 0 0;
+            cursor: pointer;
+
+            &:hover{
+                .CloseBtn{
+                    transform: rotate(90deg);
+                }
+            }
+
+            .CloseBtn {
+                width: 30px;
+                height: 6px;
+                transition: all .45s ease-in-out;
+
+                div {
+                    width: 30px;
+                    height: 3px;
+                    background-color: $blue;
+
+                    &:nth-child(1) {
+                        transform: translateY(1.5px) rotate(45deg);
+                    }
+
+                    &:nth-child(2) {
+                        transform: translateY(-1.5px) rotate(-45deg);
+                    }
+                }
+            }
+        }
+
+        .Padding{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                transform: scale(1);
+                border-radius: 20px;
+            }
+
+            .Title{
+                font-size: 36px;
+                text-align: center;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            .Info{
+                text-align: center;
+                font-size: 24px;
+                margin-top: 20px;
+            }
+
+            .Number{
+                margin-top: 50px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 690px){
+    .ModalPromActive {
+        .ModalPromCon {
+            .Padding{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px){
+    .ModalPromActive {
+        .ModalPromCon {
+            .Padding{
+                padding: 20px 0;
+
+                .Title{
+                    font-size: 8vw;
+                }
+
+                .Info{
+                    font-size: 5vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px){
+    .ModalPromActive {
+        .ModalPromCon {
+            width: 100%;
+            height: 198vw;
+            .Padding{
+                padding: 20px 0;
+
+                .Title{
+                    font-size: 8vw;
+                }
+
+                .Info{
+                    font-size: 5vw;
+                }
+            }
+        }
+    }
+}
+
+.ModalProm {
+    display: none;
+}

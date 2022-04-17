@@ -1,0 +1,50 @@
+$blue: #061E37;
+
+.About {
+    justify-self: start;
+    width: 570px;
+    color: white;
+    align-self: center;
+
+    h1 {
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 53px;
+        margin-bottom: 20px;
+
+        span {
+            font-weight: 800;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .Buttons {
+        display: flex;
+        gap: 50px;
+        transition: all .15s linear;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .About{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1092px) {
+    .About{
+        justify-self: center;
+
+        .Buttons{
+            justify-content: space-between;
+            gap: 10px;
+        }
+    }
+}

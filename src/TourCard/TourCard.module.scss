@@ -1,0 +1,168 @@
+.TourCard {
+    width: 370px;
+    background-color: white;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer;
+
+    .Scale {
+        overflow: hidden;
+        border-radius: 20px;
+
+        .Img {
+            width: 100%;
+            height: 226px;
+            border-radius: 20px;
+            background-size: cover;
+            transition: all .15s linear;
+        }
+    }
+
+    .Title {
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .Hotels {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .Price {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .ModalChildren {
+        .Img {
+            min-width: 350px;
+            height: 40vh;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            grid-area: img;
+        }
+
+        .Title{
+            grid-area: title;
+        }
+
+        .Price {
+            font-size: 20px;
+            font-weight: 600;
+            grid-area: price;
+        }
+
+        a{
+            max-width: 235px;
+            height: 60px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}
+
+.TourCardHover {
+    width: 370px;
+    background-color: white;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer;
+
+    .Scale {
+        overflow: hidden;
+        border-radius: 20px;
+
+        .Img {
+            width: 100%;
+            height: 226px;
+            border-radius: 20px;
+            background-size: cover;
+            transition: all .15s linear;
+        }
+    }
+
+    .Title {
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .Hotels {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .Price {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &:hover {
+        .Scale {
+            .Img {
+                transform: scale(1.2);
+                transition: all .15s linear;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .TourCard{
+        .ModalChildren{
+            .Img{
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .TourCard{
+        .ModalChildren{
+            .Img{
+                width: 100%;
+                min-width: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 387px) {
+    .TourCard {
+        width: 100%;
+    }
+
+    .TourCardHover {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 337px) {
+    .TourCard {
+        .Scale {
+            overflow: hidden;
+            border-radius: 20px;
+
+            .Img {
+                width: 99%;
+                height: 226px;
+                border-radius: 20px;
+                background-size: cover;
+                transition: all .15s linear;
+            }
+        }
+    }
+
+    .TourCardHover {
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+  grid-area: btn;
+  outline: none;
+}
+
+a .Button {
+  height: 60px;
+  background-color: white;
+  color: #061E37;
+  -webkit-transition: color .15s linear, background-color .15s linear, padding .15s linear;
+  transition: color .15s linear, background-color .15s linear, padding .15s linear;
+  -webkit-filter: drop-shadow(1px 4px 8px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(1px 4px 8px rgba(0, 0, 0, 0.3));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7px;
+  padding: 0 35px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  justify-self: center;
+}
+
+a .Button:hover {
+  background-color: #061E37;
+  color: white;
+}
+
+a .Button p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 360px) {
+  a .Button {
+    padding: 0 15px;
+  }
+}
+/*# sourceMappingURL=Button.module.css.map */

@@ -1,0 +1,29 @@
+.Memo {
+  width: 100%;
+}
+.Memo .MemoCon {
+  padding: 40px 85px;
+  min-height: calc(100vh - 170px - 245px);
+  transition: all 0.35s linear;
+}
+.Memo .MemoCon .MainTitle {
+  font-size: 36px;
+  text-align: center;
+}
+.Memo .MemoCon .Title {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+.Memo .MemoCon p {
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .Memo .MemoCon {
+    padding: 40px 20px;
+  }
+}
+
+/*# sourceMappingURL=Memo.module.css.map */

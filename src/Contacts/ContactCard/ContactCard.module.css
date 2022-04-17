@@ -1,0 +1,20 @@
+.ContactCard {
+  padding: 20px;
+  width: 300px;
+  height: 166px;
+  background-color: #00E9BE;
+  border-radius: 20px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.35s linear;
+}
+.ContactCard:hover {
+  background-color: white;
+  box-shadow: inset 1px -4px 8px rgba(0, 0, 0, 0.3);
+}
+.ContactCard a p {
+  text-align: center;
+  width: 100%;
+}
+
+/*# sourceMappingURL=ContactCard.module.css.map */

@@ -1,0 +1,29 @@
+.MainContent {
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  padding: 0 85px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr / 1fr 1fr;
+  gap: 50px;
+}
+
+@media screen and (max-width: 1092px) {
+  .MainContent {
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (minmax(300px, 800px))[auto-fill];
+        grid-template: 1fr/repeat(auto-fill, minmax(300px, 800px));
+    gap: 50px;
+    padding: 0 85px 35px 85px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .MainContent {
+    padding: 0 0 35px 0;
+  }
+}
+/*# sourceMappingURL=MainContent.module.css.map */

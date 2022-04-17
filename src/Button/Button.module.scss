@@ -1,0 +1,45 @@
+$blue: #061E37;
+
+a {
+    text-decoration: none;
+    grid-area: btn;
+    outline: none;
+
+    .Button {
+        height: 60px;
+        background-color: white;
+        color: $blue;
+        transition: color .15s linear, background-color .15s linear, padding .15s linear;
+        filter: drop-shadow(1px 4px 8px rgba(0, 0, 0, 0.3));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        padding: 0 35px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 700;
+        user-select: none;
+        justify-self: center;
+
+        &:hover {
+            background-color: $blue;
+            color: white;
+        }
+
+        p{
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    a{
+        .Button {
+            padding: 0 15px;
+        }
+    }
+}

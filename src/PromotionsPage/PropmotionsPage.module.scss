@@ -1,0 +1,51 @@
+.PromPage {
+    width: 100%;
+    display: grid;
+    grid-template: 170px 1fr 245px / 1fr;
+
+    .PromPageCon {
+        justify-self: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 45px 0;
+        display: grid;
+        grid-template: repeat(auto-fill, 200px) / repeat(auto-fill, 630px);
+        justify-items: center;
+        row-gap: 45px;
+        column-gap: 0;
+        transition: all .35s linear;
+    }
+}
+
+@media screen and (max-width: 1276px) {
+    .PromPage {
+        .PromPageCon {
+            grid-template: repeat(auto-fill, 200px) / repeat(auto-fill, 450px);
+            column-gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 647px) {
+    .PromPage {
+        .PromPageCon {
+            grid-template: repeat(9, 1fr) / 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .PromPage {
+        .PromPageCon {
+            padding: 45px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .PromPage {
+        .PromPageCon {
+            row-gap: 10vw;
+        }
+    }
+}

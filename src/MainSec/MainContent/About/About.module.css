@@ -1,0 +1,57 @@
+.About {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  width: 570px;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.About h1 {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 53px;
+  margin-bottom: 20px;
+}
+
+.About h1 span {
+  font-weight: 800;
+}
+
+.About p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.About .Buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-transition: all .15s linear;
+  transition: all .15s linear;
+}
+
+@media screen and (max-width: 590px) {
+  .About {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1092px) {
+  .About {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .About .Buttons {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 10px;
+  }
+}
+/*# sourceMappingURL=About.module.css.map */

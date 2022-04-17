@@ -1,0 +1,51 @@
+.RestingTypes{
+    width: 100%;
+    display: grid;
+    grid-template: 170px 1fr 245px / 1fr;
+
+    .RestingTypesCon{
+        justify-self: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 45px 0;
+        display: grid;
+        grid-template: repeat(auto-fill, 200px) / repeat(auto-fill, 630px);
+        justify-items: center;
+        row-gap: 45px;
+        column-gap: 0;
+        transition: all .35s linear;
+    }
+}
+
+@media screen and (max-width: 1276px) {
+    .RestingTypes {
+        .RestingTypesCon {
+            grid-template: repeat(auto-fill, 200px) / repeat(auto-fill, 450px);
+            column-gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 647px) {
+    .RestingTypes {
+        .RestingTypesCon {
+            grid-template: repeat(9, 1fr) / 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .RestingTypes {
+        .RestingTypesCon {
+            padding: 45px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .RestingTypes {
+        .RestingTypesCon {
+            row-gap: 10vw;
+        }
+    }
+}

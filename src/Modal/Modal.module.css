@@ -1,0 +1,207 @@
+.Modal {
+  pointer-events: none;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.Modal .ModalCon {
+  width: 60vw;
+  height: 600px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.Modal .ModalCon .ClosePanel {
+  width: 100%;
+  height: 36px;
+  background-color: #00E9BE;
+  border-radius: 20px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Modal .ModalCon .ClosePanel .CloseBtn {
+  -webkit-transition: all .45s ease-in-out;
+  transition: all .45s ease-in-out;
+}
+
+.Modal .ModalCon .ClosePanel .CloseBtn div {
+  background-color: #061E37;
+  width: 30px;
+  height: 3px;
+}
+
+.Modal .ModalCon .ClosePanel .CloseBtn div:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(1.5px);
+          transform: rotate(45deg) translateY(1.5px);
+}
+
+.Modal .ModalCon .ClosePanel .CloseBtn div:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translateY(-1.5px);
+          transform: rotate(-45deg) translateY(-1.5px);
+}
+
+.Modal .ModalCon .ClosePanel:hover .CloseBtn {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.Modal .ModalCon .Padding {
+  padding: 20px;
+}
+
+.ModalActive {
+  cursor: auto;
+  opacity: 15;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .55s linear;
+  transition: all .55s linear;
+}
+
+.ModalActive .ModalCon {
+  width: 70vw;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-transition: all .35s linear;
+  transition: all .35s linear;
+}
+
+.ModalActive .ModalCon .ClosePanel {
+  cursor: pointer;
+  width: 100%;
+  height: 36px;
+  background-color: #00E9BE;
+  border-radius: 20px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ModalActive .ModalCon .ClosePanel .CloseBtn {
+  -webkit-transition: all .45s ease-in-out;
+  transition: all .45s ease-in-out;
+}
+
+.ModalActive .ModalCon .ClosePanel .CloseBtn div {
+  background-color: #061E37;
+  width: 30px;
+  height: 3px;
+}
+
+.ModalActive .ModalCon .ClosePanel .CloseBtn div:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(2px);
+          transform: rotate(45deg) translateY(2px);
+}
+
+.ModalActive .ModalCon .ClosePanel .CloseBtn div:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translateY(-2px);
+          transform: rotate(-45deg) translateY(-2px);
+}
+
+.ModalActive .ModalCon .ClosePanel:hover .CloseBtn {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.ModalActive .ModalCon .Padding {
+  width: 100%;
+  height: 94%;
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: .3fr 1fr .9fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: .3fr 1fr .9fr / 1fr 1fr;
+  gap: 20px;
+      grid-template-areas: 'img title' 'img info' 'btn info';
+}
+
+.ModalActive .ModalCon .Padding .Info {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: info;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .ModalActive .ModalCon {
+    height: 700px;
+  }
+  .ModalActive .ModalCon .Padding {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 180px 50px 1fr 60px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 180px 50px 1fr 60px / 1fr 1fr;
+    gap: 20px;
+        grid-template-areas: 'img img' 'title title' 'info info' 'btn btn';
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ModalActive .ModalCon {
+    width: 90%;
+    height: 700px;
+  }
+  .ModalActive .ModalCon .Padding {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 180px 50px 1fr 60px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 180px 50px 1fr 60px / 1fr 1fr;
+    gap: 20px;
+        grid-template-areas: 'img img' 'title title' 'info info' 'btn btn';
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .ModalActive .ModalCon {
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=Modal.module.css.map */

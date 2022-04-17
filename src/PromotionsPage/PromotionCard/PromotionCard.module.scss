@@ -1,0 +1,28 @@
+.PromotionCard{
+    width: 442px;
+    max-height: 203px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img{
+        transition: all .15s linear;
+    }
+
+    &:hover{
+        img{
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .PromotionCard{
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+    }
+}

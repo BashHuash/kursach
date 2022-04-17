@@ -1,0 +1,110 @@
+.ModalRestActive {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ModalRestActive .ModalRestCon {
+  border-radius: 20px;
+  background-color: white;
+  width: 70vw;
+  height: 700px;
+  cursor: auto;
+}
+.ModalRestActive .ModalRestCon .ClosePanel {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00E9BE;
+  border-radius: 20px 20px 0 0;
+  cursor: pointer;
+}
+.ModalRestActive .ModalRestCon .ClosePanel:hover .CloseBtn {
+  transform: rotate(90deg);
+}
+.ModalRestActive .ModalRestCon .ClosePanel .CloseBtn {
+  width: 30px;
+  height: 6px;
+  transition: all 0.45s ease-in-out;
+}
+.ModalRestActive .ModalRestCon .ClosePanel .CloseBtn div {
+  width: 30px;
+  height: 3px;
+  background-color: #061E37;
+}
+.ModalRestActive .ModalRestCon .ClosePanel .CloseBtn div:nth-child(1) {
+  transform: translateY(1.5px) rotate(45deg);
+}
+.ModalRestActive .ModalRestCon .ClosePanel .CloseBtn div:nth-child(2) {
+  transform: translateY(-1.5px) rotate(-45deg);
+}
+.ModalRestActive .ModalRestCon .Padding {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ModalRestActive .ModalRestCon .Padding img {
+  transform: scale(1);
+  border-radius: 20px;
+}
+.ModalRestActive .ModalRestCon .Padding .Title {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.ModalRestActive .ModalRestCon .Padding .Info {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+.ModalRestActive .ModalRestCon .Padding .Number {
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media screen and (max-width: 690px) {
+  .ModalRestActive .ModalRestCon .Padding img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .ModalRestActive .ModalRestCon .Padding {
+    padding: 20px 0;
+  }
+  .ModalRestActive .ModalRestCon .Padding .Title {
+    font-size: 8vw;
+  }
+  .ModalRestActive .ModalRestCon .Padding .Info {
+    font-size: 5vw;
+  }
+}
+@media screen and (max-width: 350px) {
+  .ModalRestActive .ModalRestCon {
+    width: 100%;
+    height: 198vw;
+  }
+  .ModalRestActive .ModalRestCon .Padding {
+    padding: 20px 0;
+  }
+  .ModalRestActive .ModalRestCon .Padding .Title {
+    font-size: 8vw;
+  }
+  .ModalRestActive .ModalRestCon .Padding .Info {
+    font-size: 5vw;
+  }
+}
+.ModalRest {
+  display: none;
+}
+
+/*# sourceMappingURL=ModalRest.module.css.map */

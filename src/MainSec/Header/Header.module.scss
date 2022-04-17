@@ -1,0 +1,49 @@
+$blue: #061E37;
+
+.Header {
+    width: 100%;
+    height: 170px;
+    padding: 0 85px;
+    display: grid;
+    grid-template: 1fr / 80px 1fr;
+    grid-template-areas: 'a menu';
+    align-items: center;
+    justify-items: center;
+    background-size: cover;
+    transition: padding .15s linear;
+
+    a {
+        grid-area: a;
+
+        .logo {
+            path:nth-child(1) {
+                transition: all .15s linear;
+            }
+
+            path:nth-child(2) {
+                transition: all .55s linear;
+            }
+
+            circle {
+                transition: all .55s linear;
+            }
+
+            &:hover {
+                path {
+                    fill: $blue;
+                }
+
+                circle {
+                    stroke: $blue;
+                    stroke-width: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Header {
+        padding: 0 35px;
+    }
+}

@@ -1,0 +1,156 @@
+.Menu {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.Menu .MenuBtn {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Menu .MenuBtn:hover div {
+  background-color: #061E37;
+}
+
+.Menu .MenuBtn div {
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.Menu .BlurHidden {
+  position: absolute;
+  top: 430px;
+  left: -185%;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100vw;
+  height: 500px;
+  z-index: 1;
+  -webkit-transition: left .25s linear;
+  transition: left .25s linear;
+}
+
+.Menu .BlurShown {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100%;
+  position: absolute;
+  top: 430px;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: left .25s linear;
+  transition: left .25s linear;
+  cursor: auto;
+}
+
+.Menu .MenuItemsHidden {
+  position: absolute;
+  left: -185%;
+  top: 170px;
+  width: 100vw;
+  background-image: url("../../../../media/subBG.png");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  -webkit-transition: left .25s linear;
+  transition: left .25s linear;
+}
+
+.Menu .MenuItemsHidden a {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: color .15s linear;
+  transition: color .15s linear;
+}
+
+.Menu .MenuItemsHidden a:nth-child(1) {
+  border-top: solid 2px white;
+}
+
+.Menu .MenuItemsHidden a:nth-child(4) {
+  border-bottom: solid 2px white;
+}
+
+.Menu .MenuItemsHidden .Active {
+  color: #061E37;
+}
+
+.Menu .MenuItemsShown {
+  width: 100%;
+  background-image: url("../../../../media/subBG.png");
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 170px;
+  z-index: 1;
+  -webkit-transition: left .25s linear;
+  transition: left .25s linear;
+}
+
+.Menu .MenuItemsShown a {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: color .15s linear;
+  transition: color .15s linear;
+}
+
+.Menu .MenuItemsShown a:hover {
+  color: #061E37;
+}
+
+.Menu .MenuItemsShown a:nth-child(1) {
+  border-top: solid 2px white;
+}
+
+.Menu .MenuItemsShown a:nth-child(4) {
+  border-bottom: solid 2px white;
+}
+
+.Menu .MenuItemsShown .Active {
+  color: #061E37;
+}
+/*# sourceMappingURL=BurgerMenu.module.css.map */

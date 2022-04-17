@@ -1,0 +1,37 @@
+.Menu {
+  justify-self: center;
+  width: 520px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: padding-left .15s linear;
+  transition: padding-left .15s linear;
+}
+
+.Menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: color .15s linear;
+  transition: color .15s linear;
+}
+
+.Menu a:hover {
+  color: #061E37;
+}
+
+.Menu .Active {
+  color: #061E37;
+  border-bottom: 3px solid #061E37;
+}
+
+@media screen and (max-width: 1000px) {
+  .Menu {
+    padding-left: 10vw;
+  }
+}
+/*# sourceMappingURL=StandardMenu.module.css.map */

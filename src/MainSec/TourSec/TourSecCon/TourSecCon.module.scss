@@ -1,0 +1,70 @@
+$blue: #061E37;
+
+.TourSecCon {
+    width: 100%;
+    min-height: calc(100vh - 245px);
+    padding: 35px 85px;
+    transition: padding .15s linear;
+
+    .Title {
+        font-size: 45px;
+        color: $blue;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .TourCards {
+        margin-top: 50px;
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .invisible{
+        display: none;
+    }
+
+    .Btn {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1670px) {
+    .TourSecCon {
+        .TourCards {
+            grid-template: auto / repeat(auto-fill, minmax(400px, 1fr));
+        }
+
+        .visible{
+            grid-template: auto / repeat(auto-fill, minmax(400px, 1fr));
+        }
+    }
+}
+
+@media screen and (max-width: 1017px) {
+    .TourSecCon {
+        padding: 35px 20px;
+    }
+}
+
+@media screen and (max-width: 866px) {
+    .TourSecCon {
+        .TourCards {
+            gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .TourSecCon {
+        padding: 35px 0;
+
+        .TourCards {
+            grid-template: auto / repeat(auto-fill, minmax(320px, 1fr));
+        }
+    }
+}

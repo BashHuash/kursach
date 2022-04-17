@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CAMf;;AARD,AAII,QAJI,CAIJ,GAAG,CAAC;EACA,gBAAgB,EAAE,0BAA0B;EAC5C,eAAe,EAAE,KAAK;CACzB",
+    "sources": [
+        "MainSec.module.scss"
+    ],
+    "names": [],
+    "file": "MainSec.module.css"
+}
